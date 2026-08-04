@@ -1,1 +1,1 @@
-# Java Short-Project
+# Java-Short-Projects
