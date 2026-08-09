@@ -7,5 +7,14 @@ public class Main {
         W1.attack(W2);
 
         System.out.println(W2.getHealth());
+
+        Mage M1 = new Mage("Nula", 125, 25, 30);
+
+        M1.attack(W2);
+        M1.attack(W1);
+        M1.attack(W2);
+        M1.attack(W2);
+
+        System.out.println(W2.getHealth());
     }
 }
