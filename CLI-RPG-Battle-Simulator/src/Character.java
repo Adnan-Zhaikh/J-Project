@@ -45,10 +45,14 @@ public abstract class Character {
         return attackPower;
     }
 
-    private ArrayList<Usable> Inventory = new ArrayList<>();
+    private ArrayList<Usable> inventory = new ArrayList<>();
 
     public void addItem(Usable item) {
-        Inventory.add(item);
+        inventory.add(item);
+    }
+
+    public void useItem(int index) {
+        inventory.get(index).use(this);
     }
     
 }
