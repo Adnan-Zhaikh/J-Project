@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Character {
     private String name;
     private int health;
@@ -15,7 +17,7 @@ public abstract class Character {
         health = Math.min(health + amount, maxHealth);
     }
 
-    
+
     public abstract void attack(Character target);
 
     public void takeDamage(int amount) {
@@ -41,6 +43,12 @@ public abstract class Character {
 
     public int getAttackPower() {
         return attackPower;
+    }
+
+    private ArrayList<Usable> Inventory = new ArrayList<>();
+
+    public void addItem(Usable item) {
+        Inventory.add(item);
     }
     
 }
