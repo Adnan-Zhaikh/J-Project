@@ -1,12 +1,16 @@
 public class Battle {
     public static void fight(Character c1, Character c2) {
         boolean c1Turn = true;
+        
+        c2.applyPoison(2);
 
         while (c1.isAlive() && c2.isAlive()) {
             if (c1Turn) {
                 c1.attack(c2);
+                c1.tickStatusEffects();
             } else {
                 c2.attack(c1);
+                c2.tickStatusEffects();
             }
 
             c1Turn = !c1Turn;
