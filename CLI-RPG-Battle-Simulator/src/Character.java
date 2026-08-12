@@ -10,7 +10,12 @@ public abstract class Character {
         this.attackPower = attackPower;
         maxHealth = health;
     }
+    
+    public void heal(int amount) {
+        health = Math.min(health + amount, maxHealth);
+    }
 
+    
     public abstract void attack(Character target);
 
     public void takeDamage(int amount) {

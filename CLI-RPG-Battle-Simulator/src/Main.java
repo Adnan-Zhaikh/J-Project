@@ -14,7 +14,12 @@ public class Main {
         M1.attack(W1);
         M1.attack(W2);
         M1.attack(W2);
-
+        
         System.out.println(W2.getHealth());
+
+        W2.heal(43);
+
+        System.out.println("After Healing " + W2.getName() + ", HP is " + W2.getHealth() + "/" + W2.getMaxHealth());
+
     }
 }
