@@ -14,13 +14,9 @@ public class Battle {
 
         if (c1.isAlive()) {
             System.out.println("The Winner is " + c1.getName());
-        } else {
-            System.out.println("The Winner is " + c2.getName());
-        }
-
-        if (c1.isAlive()) {
             System.out.println("The Winner's HP " + c1.getHealth());
         } else {
+            System.out.println("The Winner is " + c2.getName());
             System.out.println("The Winner's HP " + c2.getHealth());
         }
     }
