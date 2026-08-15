@@ -30,4 +30,34 @@ public class Main {
             }
         }
     }
+
+    public static Character createCharacter(Scanner sc) {
+        System.out.println("Choose class: 1. Warrior  2. Mage");
+        int classChoice = sc.nextInt();
+        sc.nextLine(); // flush leftover newline
+
+        System.out.println("Enter name:");
+        String name = sc.nextLine();
+
+        System.out.println("Enter health:");
+        int health = sc.nextInt();
+
+        System.out.println("Enter attack power:");
+        int attackPower = sc.nextInt();
+
+        if (classChoice == 1) {
+            Warrior w1 = new Warrior(name, health, attackPower);
+            return w1;
+
+        } else if (classChoice == 2) {
+            System.out.println("Enter Mana:");
+            int mana = sc.nextInt();
+            Mage m1 = new Mage(name, health, attackPower, mana);
+            return m1;
+
+        } else {
+            System.out.println("Invalid Choice");
+            return null;
+        }
+    }
 }
